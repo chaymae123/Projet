@@ -2,13 +2,17 @@ package com.example.my_movie.controller;
 
 import com.example.my_movie.model.actor;
 import com.example.my_movie.model.film;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Api(value = "Swagger2DemoRestController", description = "REST Apis related to Movies Entity!!!!")
 @RestController
 public class Controller {
     static List<actor> ActorList = new ArrayList<actor>();
@@ -21,6 +25,12 @@ public class Controller {
         ActorList .add(new actor("Nice","ss","22-11-3333",FilmList));
 
     }
+    @ApiOperation(value = "Get list of Mivies in the System ", response = Iterable.class, tags = "Actors")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Suceess|OK"),
+            @ApiResponse(code = 401, message = "not authorized!"),
+            @ApiResponse(code = 403, message = "forbidden!!!"),
+            @ApiResponse(code = 404, message = "not found!!!") })
     @RequestMapping("/Actors/{film}")
     public List<actor> getActorsByFilm(String filmTitle) {
         List<actor> result = new ArrayList<>();

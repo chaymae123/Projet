@@ -1,11 +1,13 @@
 package com.example.my_movie.model;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.util.List;
 
 public class actor {
-
+    @ApiModelProperty(notes = "le nom d'acteur",name="actor_name",required=true,value="Nice")
     private String Nom;
-
+    @ApiModelProperty(notes = "le prenom d'acteur",name="actor_prenom",required=true,value="chaymae")
     private String Prénom;
 
     public actor(String nom, String prenom, String datenaissance, List filmographie) {
@@ -47,9 +49,9 @@ public class actor {
         this.filmography = filmography;
     }
 
-
+    @ApiModelProperty(notes = "la date de naissance d'acteur",name="date_acteur",required=true,value="22-11-1234")
     private String DateNaissance;
-
+    @ApiModelProperty(notes = "filmographie d'acteur",name="filmographie_acteur",required=true)
     private List<film> filmography;
 
 
