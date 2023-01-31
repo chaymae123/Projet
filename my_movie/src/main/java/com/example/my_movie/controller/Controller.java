@@ -19,10 +19,10 @@ public class Controller {
     static List<film> FilmList = new ArrayList<film>();
 
     static{
-        FilmList .add(new film("Nice","ss","FR","22-11-3333"));
-        FilmList .add(new film("Nice","ss","FR","22-11-3333"));
-        FilmList .add(new film("Nice","ss","FR","22-11-3333"));
-        ActorList .add(new actor("Nice","ss","22-11-3333",FilmList));
+        FilmList .add(new film("Nasa","Chaymae","Bilal","22-11-3333"));
+        FilmList .add(new film("Foret","Bilal","ABir","22-11-2000"));
+        FilmList .add(new film("ville dans la neige","Habiba","MAMA","22-11-2019"));
+        ActorList .add(new actor("Salim","Mahdi","22-11-2001",FilmList));
 
     }
     @ApiOperation(value = "Get list of Movies in the System ", response = Iterable.class, tags = "Actors")
