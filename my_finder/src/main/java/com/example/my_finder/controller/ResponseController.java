@@ -22,7 +22,6 @@ public class ResponseController {
             @ApiResponse(code = 401, message = "not authorized!"),
             @ApiResponse(code = 403, message = "forbidden!!!"),
             @ApiResponse(code = 404, message = "not found!!!") })
-
     @RequestMapping(value = "/showMovies/{name}", method = RequestMethod.GET)
     public String showMovies(@PathVariable(value = "name") String name) {
         return serviceResponse.callResponse(name);

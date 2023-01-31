@@ -17,7 +17,7 @@ public class serviceResponse {
     public String callResponse(String name) {
 
         String response = restTemplate
-                .exchange("http://localhost:8080/moviesSearch/{name}"
+                .exchange("http://localhost:8080/ActorSearch/{name}"
                         , HttpMethod.GET
                         , null
                         , new ParameterizedTypeReference<String>() {
