@@ -25,7 +25,7 @@ public class Controller {
         ActorList .add(new actor("Nice","ss","22-11-3333",FilmList));
 
     }
-    @ApiOperation(value = "Get list of Mivies in the System ", response = Iterable.class, tags = "Actors")
+    @ApiOperation(value = "Get list of Movies in the System ", response = Iterable.class, tags = "Actors")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Suceess|OK"),
             @ApiResponse(code = 401, message = "not authorized!"),
